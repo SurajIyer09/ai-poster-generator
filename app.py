@@ -24,7 +24,7 @@ if st.button("Generate Poster"):
             image_url = response.json().get("image_url")
             image_response = requests.get(image_url)
             image = Image.open(BytesIO(image_response.content))
-            st.image(image, caption="Your AI Poster", use_column_width=True)
+            st.image(image, caption="Your AI Poster", use_container_width=True)
 
             # Download button
             buffered = BytesIO()
